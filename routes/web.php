@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
+use App\Http\Livewire\HomePage;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/',[HomePage::class]);
+Route::get('/', [Controller::class, 'home'] );
